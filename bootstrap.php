@@ -13,7 +13,10 @@
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-// define BASE_PATH
+/**
+ * define some constant value
+ */
+//define BASE_PATH
 define('BASE_PATH', __DIR__);
 
 // Autoload

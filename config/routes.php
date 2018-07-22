@@ -8,6 +8,9 @@
 
 use NoahBuscher\Macaw\Macaw;
 
+//if get current user is false
+//return login page
+
 Macaw::get('test', function() {
     echo "Hello world";
 });

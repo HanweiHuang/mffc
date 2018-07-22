@@ -8,9 +8,12 @@
   },
   "autoload": {
     "classmap": [
+      "services",
       "app/controllers",
-      "app/models",
-      "services"
+      "app/models"
+    ],
+    "files": [
+      "services/utility.php"
     ]
   }
 }

@@ -1,5 +1,6 @@
 <?php
-    require BASE_PATH.'/app/views/header.php';
+    //require BASE_PATH.'/app/views/header.php';
+    get_template_part("app/views/header");
 ?>
 
 <div class="article">
@@ -15,5 +16,6 @@
 </div>
 
 <?php
-    require BASE_PATH.'/app/views/footer.php';
+    get_template_part("app/views/footer");
+    //require BASE_PATH.'/app/views/footer.php';
 ?>
