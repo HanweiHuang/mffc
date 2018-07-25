@@ -1,10 +1,5 @@
 .htaccess
 .idea/
-db-convert.php
-db-replace/
-fs-test/*
-wp-content/themes/gcgportal/uploads/*
-wp-content/themes/gcgportal/temp/*
 log/*
 test*
 config/local-config.php
@@ -12,6 +7,7 @@ config/local-config.php
 *.sass-cache
 composer.phar
 vendor/
+
 
 # Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file

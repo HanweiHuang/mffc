@@ -8,6 +8,9 @@
 
 use NoahBuscher\Macaw\Macaw;
 
+//if get current user is false
+//return login page
+
 Macaw::get('test', function() {
     echo "Hello world";
 });
@@ -24,6 +27,7 @@ Macaw::$error_callback = function() {
  * root route, function index in Controller Homecontroller(Homecontroller.php)
  * will process this root request
  */
-Macaw::get('/', 'HomeController@index');
+//Macaw::get('/', 'HomeController@index');
+Macaw::get('/', 'HomeController@usersList');
 
 Macaw::dispatch();

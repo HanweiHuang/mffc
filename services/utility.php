@@ -1,20 +1,39 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: HarveySally
- * Date: 7/17/2018
- * Time: 11:51 PM
+ * get template by name
  */
+function get_template_part( $slug, $name = null ) {
 
-class Utility{
+    $templates = array();
+    $name = (string) $name;
+    if ( '' !== $name )
+        $templates[] = "{$slug}-{$name}.php";
 
-    public function __construct(){
+    $templates[] = "{$slug}.php";
+
+    locate_template($templates, true, false);
+}
+
+function locate_template($template_names, $load = false, $require_once = true ) {
+    $located = '';
+    foreach ( (array) $template_names as $template_name ) {
+        if ( !$template_name )
+            continue;
+        if ( file_exists(BASE_PATH . '/' . $template_name)) {
+            $located = BASE_PATH . '/' . $template_name;
+            break;
+        }
     }
+    if ( $load && '' != $located )
+        load_template( $located, $require_once );
+    return $located;
+}
 
-
-    public static function test(){
-        echo "hello utility";
+function load_template( $_template_file, $require_once = true ) {
+    if ( $require_once ) {
+        require_once( $_template_file );
+    } else {
+        require( $_template_file );
     }
-
-
 }
