@@ -27,6 +27,7 @@ Macaw::$error_callback = function() {
  * root route, function index in Controller Homecontroller(Homecontroller.php)
  * will process this root request
  */
-Macaw::get('/', 'HomeController@index');
+//Macaw::get('/', 'HomeController@index');
+Macaw::get('/', 'HomeController@usersList');
 
 Macaw::dispatch();

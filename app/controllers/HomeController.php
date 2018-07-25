@@ -29,5 +29,20 @@ class HomeController extends BaseController
         //example for use redis
         //Redis::set('key','value',25,'s');
         //echo Redis::get('key');
+
+
+    }
+
+    public function usersList(){
+        $users = User::all();
+        $return_result = [];
+        foreach($users as $u){
+            $user['email'] = $u->user_email;
+            $user['name'] = $u->user_nicename;
+
+            $return_result[] = $user;
+        }
+        $this->view = View::make('users')->with('users', $return_result);
+
     }
 }

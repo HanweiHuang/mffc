@@ -10,5 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model{
 
+    //protected $table = 'mffc_users';
+
     public $timestamps = false;
 }
